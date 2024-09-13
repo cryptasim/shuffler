@@ -15,24 +15,24 @@ const metaTags = [
   { property: 'og:title', content: 'Question Shuffler' },
   { property: 'og:description', content: 'Easily shuffle and randomize your questions' },
   { property: 'og:type', content: 'website' },
-  { property: 'og:url', content: 'https://questionshuffler.com' },
-  { property: 'og:image', content: 'https://questionshuffler.com/og-image.jpg' },
+  { property: 'og:url', content: 'https://shuffler-sage.vercel.app/' },
+  { property: 'og:image', content: 'https://shuffler-sage.vercel.app/og-image.jpg' },
   { name: 'twitter:card', content: 'summary_large_image' },
   { name: 'twitter:title', content: 'Question Shuffler' },
   { name: 'twitter:description', content: 'A tool to shuffle and randomize questions' },
-  { name: 'twitter:image', content: 'https://questionshuffler.com/twitter-image.jpg' },
+  { name: 'twitter:image', content: 'https://shuffler-sage.vercel.app/twitter-image.jpg' },
   { name: 'twitter:creator', content: '@AjoyKumarHansda' },
   { property: 'fb:app_id', content: '123456789' },
   { name: 'linkedin:title', content: 'Question Shuffler' },
   { name: 'linkedin:description', content: 'Easily shuffle and randomize your questions' },
-  { name: 'linkedin:image', content: 'https://questionshuffler.com/linkedin-image.jpg' },
+  { name: 'linkedin:image', content: 'https://shuffler-sage.vercel.app/linkedin-image.jpg' },
   { property: 'og:site_name', content: 'Question Shuffler' },
   { property: 'og:image:width', content: '1200' },
   { property: 'og:image:height', content: '630' },
   { property: 'og:locale', content: 'en_US' },
   { name: 'whatsapp:title', content: 'Question Shuffler' },
   { name: 'whatsapp:description', content: 'Easily shuffle and randomize your questions' },
-  { name: 'whatsapp:image', content: 'https://questionshuffler.com/whatsapp-image.jpg' }
+  { name: 'whatsapp:image', content: 'https://shuffler-sage.vercel.app/whatsapp-image.jpg' }
 ];
 
 metaTags.forEach(tag => {
