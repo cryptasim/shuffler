@@ -60,7 +60,7 @@ function App() {
         </button>
       </div>
       <footer className="app-footer">
-        <p>&copy; 2023 Question Shuffler. All rights reserved.</p>
+        <p>&copy; 2024 Ajoy Kumar Hansda. All rights reserved.</p>
       </footer>
     </div>
   );
