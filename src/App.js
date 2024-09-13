@@ -24,37 +24,44 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Question Randomizer</h1>
+      <header className="app-header">
+        <h1 className="app-title">Question Shuffler</h1>
       </header>
-      <main className="container">
-        <section className="question-input">
-          <h2>Input Questions</h2>
+      <main className="app-container">
+        <section className="question-section input-section">
+          <h2 className="section-title">Enter Your Questions</h2>
           <textarea
+            className="question-textarea"
             value={inputQuestions}
             onChange={(e) => setInputQuestions(e.target.value)}
-            placeholder="Enter your questions here, one per line"
-            rows={10}
-            cols={50}
+            placeholder="Type or paste your questions here, one per line"
+            rows={12}
             aria-label="Input questions"
           />
         </section>
-        <section className="question-output">
-          <h2>Randomized Questions</h2>
+        <section className="question-section output-section">
+          <h2 className="section-title">Shuffled Questions</h2>
           <textarea
+            className="question-textarea"
             value={outputQuestions}
             readOnly
-            placeholder="Randomized questions will appear here with numbers"
-            rows={10}
-            cols={50}
-            aria-label="Randomized questions"
+            placeholder="Your shuffled questions will appear here"
+            rows={12}
+            aria-label="Shuffled questions"
           />
-          <div className="button-group">
-            <button onClick={shuffleQuestions} className="btn btn-primary">Randomize</button>
-            <button onClick={copyToClipboard} className="btn btn-secondary">Copy to Clipboard</button>
-          </div>
         </section>
       </main>
+      <div className="button-group">
+        <button onClick={shuffleQuestions} className="btn btn-primary">
+          <i className="fas fa-random"></i> Shuffle Questions
+        </button>
+        <button onClick={copyToClipboard} className="btn btn-secondary">
+          <i className="fas fa-copy"></i> Copy to Clipboard
+        </button>
+      </div>
+      <footer className="app-footer">
+        <p>&copy; 2023 Question Shuffler. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
