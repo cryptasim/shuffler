@@ -27,6 +27,16 @@ function App() {
     const shuffled = [...questions].sort(() => 0.5 - Math.random());
     const numberedShuffled = shuffled.map((q, index) => `${index + 1}. ${q}`);
     setOutputQuestions(numberedShuffled.join('\n'));
+    toast.success('Questions shuffled!', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const copyToClipboard = () => {

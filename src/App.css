@@ -213,16 +213,17 @@ body {
   }
 
   .question-section.output-section {
-    order: 1;
+    order: 2;
   }
 
   .btn-primary.shuffle-button {
-    order: 0;
-    margin-bottom: 1rem;
+    order: 1;
+    margin: 1rem auto;
+    width: 80%;
   }
 
-  .question-section.output-section {
-    order: 1;
+  .question-section.input-section {
+    order: 0;
   }
 }
 
