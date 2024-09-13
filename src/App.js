@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";import './App.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [inputQuestions, setInputQuestions] = useState('');
   const [outputQuestions, setOutputQuestions] = useState('');
@@ -23,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <ToastContainer />    <div className="App">
       <header className="app-header">
         <h1 className="app-title">Question Shuffler</h1>
       </header>
