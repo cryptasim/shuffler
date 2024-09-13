@@ -1,8 +1,8 @@
 // Question Shuffler
-// Copyright (c) 2024 Your Name
+// Copyright (c) 2024 Ajoy Kumar Hansda
 // A tool to randomize questions
 // Question Shuffler
-// Copyright (c) 2024 Your Name
+// Copyright (c) 2024 Ajoy Kumar Hansda
 // A tool to randomize questions
 import React from 'react';
 import ReactDOM from 'react-dom/client';
