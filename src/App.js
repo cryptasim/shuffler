@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Zoom } from "react-toastify";
@@ -7,6 +7,20 @@ import './App.css';
 function App() {
   const [inputQuestions, setInputQuestions] = useState('');
   const [outputQuestions, setOutputQuestions] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   const shuffleQuestions = () => {
     const questions = inputQuestions.split('\n').filter(q => q.trim() !== '');
@@ -44,6 +58,12 @@ function App() {
       });
   };
 
+  const renderShuffleButton = () => (
+    <button onClick={shuffleQuestions} className="btn btn-primary shuffle-button">
+      <i className="fas fa-random"></i> Shuffle Questions
+    </button>
+  );
+
   return (
     <>
       <ToastContainer
@@ -75,6 +95,7 @@ function App() {
               aria-label="Input questions"
             />
           </section>
+          {isMobile && renderShuffleButton()}
           <section className="question-section output-section">
             <h2 className="section-title">Shuffled Questions</h2>
             <textarea
@@ -88,9 +109,7 @@ function App() {
           </section>
         </main>
         <div className="button-group">
-          <button onClick={shuffleQuestions} className="btn btn-primary">
-            <i className="fas fa-random"></i> Shuffle Questions
-          </button>
+          {!isMobile && renderShuffleButton()}
           <button onClick={copyToClipboard} className="btn btn-secondary">
             <i className="fas fa-copy"></i> Copy to Clipboard
           </button>

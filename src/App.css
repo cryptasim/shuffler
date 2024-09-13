@@ -181,6 +181,20 @@ body {
   }
 }
 
+.toast-container {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.toast-success {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.toast-error {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
 @media (max-width: 767px) {
   .button-group {
     flex-direction: column;
