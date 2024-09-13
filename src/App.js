@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Zoom } from "react-toastify";import './App.css';
+import { Zoom } from "react-toastify";
+import './App.css';
 
 function App() {
   const [inputQuestions, setInputQuestions] = useState('');
@@ -17,17 +18,47 @@ function App() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(outputQuestions)
       .then(() => {
-        toast.success('Shuffled questions have been copied to clipboard.');
+        toast.info('Questions copied!', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       })
       .catch(err => {
         console.error('Failed to copy text: ', err);
-        toast.error('Failed to copy to clipboard.');
+        toast.error('Copy failed. Please try again.', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 
   return (
     <>
-      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="colored" transition={Zoom} />
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Zoom}
+      />
       <div className="App">
         <header className="app-header">
           <h1 className="app-title">Question Shuffler</h1>

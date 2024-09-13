@@ -181,6 +181,37 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-primary {
+    order: -1;
+  }
+
+  .btn-secondary {
+    order: 0;
+  }
+
+  .app-container {
+    flex-direction: column;
+  }
+
+  .question-section.output-section {
+    order: 1;
+  }
+
+  .btn-primary.shuffle-button {
+    order: 0;
+    margin-bottom: 1rem;
+  }
+
+  .question-section.output-section {
+    order: 1;
+  }
+}
+
 @media (min-width: 768px) {
   .App {
     padding: 2rem;
