@@ -1,6 +1,9 @@
 // Question Shuffler
 // Copyright (c) 2024 Your Name
 // A tool to randomize questions
+// Question Shuffler
+// Copyright (c) 2024 Your Name
+// A tool to randomize questions
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
