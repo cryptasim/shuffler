@@ -8,28 +8,28 @@ body {
 .App {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .app-header {
   background-color: #ffffff;
   color: #333;
-  padding: 1.5rem 0;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .app-title {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .app-container {
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .question-section {
@@ -37,7 +37,7 @@ body {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -51,8 +51,8 @@ body {
 .section-title {
   color: #333;
   margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -61,8 +61,8 @@ body {
 .section-title::before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-right: 0.5rem;
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,7 +84,7 @@ body {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   resize: vertical;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Roboto", Arial, sans-serif;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
@@ -98,12 +98,12 @@ body {
 .button-group {
   margin-top: 1.5rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   font-size: 0.875rem;
   border: none;
   border-radius: 4px;
@@ -115,6 +115,7 @@ body {
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -155,7 +156,7 @@ body {
 
 .app-footer {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   color: #757575;
   font-size: 0.75rem;
 }
@@ -177,5 +178,52 @@ body {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding: 2rem;
+  }
+
+  .app-header {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .app-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .question-section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-title::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .question-textarea {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
   }
 }
